@@ -1,0 +1,57 @@
+const projects = [
+    {
+        title: "Project Placeholder 1",
+        thumb: "assets/placeholder_project.png",     // thumbnail image here 
+        hover: "assets/placeholder_project.gif",     // GIF here 
+        content: `
+            <!--  Replace with actual GIF or image -->
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <p>Project description </p>
+        `
+    },
+
+    {
+        title: "Project Placeholder 2",
+        thumb: "assets/placeholder_project.png",     
+        hover: "assets/placeholder_project.gif",     
+        content: `
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <p>Description for placeholder project #2. Add more text here later.</p>
+        `
+    }
+];
+
+const grid = document.getElementById("projectGrid");
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modalContent");
+
+// Build project boxes
+projects.forEach((p, index) => {
+    let div = document.createElement("div");
+    div.className = "project";
+
+    div.innerHTML = `
+        <!-- Placeholder images -->
+        <img src="${p.thumb}" class="main-img">
+        <img src="${p.hover}" class="hover-img">
+    `;
+
+    div.onclick = () => openProject(index);
+    grid.appendChild(div);
+});
+
+// Modal logic
+function openProject(i) {
+    modalContent.innerHTML = `
+        <button class="close-btn" id="closeBtn">✕</button>
+        <h2>${projects[i].title}</h2>
+        ${projects[i].content}
+    `;
+    modal.style.display = "flex";
+
+    document.getElementById("closeBtn").onclick = closeModal;
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
