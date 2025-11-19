@@ -1,6 +1,6 @@
 const projects = [
     {
-        title: "Project Placeholder 1",
+        title: "Project 1 - 3D Platformer",
         thumb: "assets/placeholder_project.png",     // thumbnail image here 
         hover: "assets/placeholder_project.gif",     // GIF here 
         content: `
@@ -11,12 +11,32 @@ const projects = [
     },
 
     {
-        title: "Project Placeholder 2",
+        title: "Project 2 - Online 1v1 Tennis game",
         thumb: "assets/placeholder_project.png",     
         hover: "assets/placeholder_project.gif",     
         content: `
             <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
             <p>Description for placeholder project #2. Add more text here later.</p>
+        `
+    },
+
+    {
+        title: "Project 3 - Wario Ware Inspired Minigame game",
+        thumb: "assets/placeholder_project.png",     
+        hover: "assets/placeholder_project.gif",     
+        content: `
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <p>Description for placeholder project #3. Add more text here later.</p>
+        `
+    },
+
+    {
+        title: "Project 4 - 2D sidescroller",
+        thumb: "assets/placeholder_project.png",     
+        hover: "assets/placeholder_project.gif",     
+        content: `
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <p>Description for placeholder project #4. Add more text here later.</p>
         `
     }
 ];
