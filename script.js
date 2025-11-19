@@ -48,10 +48,12 @@ function openProject(i) {
         ${projects[i].content}
     `;
     modal.style.display = "flex";
+    document.body.classList.add("modal-open");
 
     document.getElementById("closeBtn").onclick = closeModal;
 }
 
 function closeModal() {
     modal.style.display = "none";
+    document.body.classList.remove("modal-open");
 }

@@ -35,6 +35,14 @@ h1, h2 {
     padding: 20px;
 }
 
+.projects-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1b1b1b;
+    border-radius: 12px;
+}
+
 .project {
     position: relative;
     height: 180px;
@@ -66,7 +74,7 @@ h1, h2 {
     opacity: 1;
 }
 
-/* Modal */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -85,6 +93,12 @@ h1, h2 {
     padding: 20px;
     border-radius: 12px;
     position: relative;
+}
+
+.modal-open .project {
+    filter: grayscale(100%);
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .close-btn {
@@ -106,6 +120,7 @@ h1, h2 {
     padding: 20px;
     background: #1b1b1b;
     border-radius: 12px;
+    align-items: center;
 }
 
 .profile-img {
@@ -121,21 +136,34 @@ h1, h2 {
 }
 
 .profile-info h1 {
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin: 0;
     font-size: 32px;
+    font-weight: 700;
+}
+
+.profile-info p{
+    margin-top: 8px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.social-box-container {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #222;
+    border-radius: 10px;
+    width: fit-content;
 }
 
 .social-row {
-    margin-top: 20px;
     display: flex;
-    gap: 12px;
+    gap: 14px;
+    justify-content: center;
 }
 
 .social-row img {
     width: 40px;
     height: 40px;
-    cursor: pointer;
 }
 
 .section-title {
