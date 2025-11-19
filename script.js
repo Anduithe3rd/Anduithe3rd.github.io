@@ -24,6 +24,7 @@ const projects = [
 const grid = document.getElementById("projectGrid");
 const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modalContent");
+const closeBtn = document.getElementById("closeBtn");
 
 // Build project boxes
 projects.forEach((p, index) => {
@@ -43,7 +44,6 @@ projects.forEach((p, index) => {
 // Modal logic
 function openProject(i) {
     modalContent.innerHTML = `
-        <button class="close-btn" id="closeBtn">✕</button>
         <h2>${projects[i].title}</h2>
         ${projects[i].content}
     `;
@@ -56,4 +56,13 @@ function openProject(i) {
 function closeModal() {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
+}
+
+closeBtn.onclick = closeModal;
+
+// Close if clicking outside the content box
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
 }
