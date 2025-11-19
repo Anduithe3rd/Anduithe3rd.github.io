@@ -16,27 +16,23 @@ a {
     color: inherit;
 }
 
-/* --- Profile Card Section --- */
 .profile-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px auto 80px; /* Spacing from top and before projects */
+    margin: 60px auto 80px; 
 }
 
 .profile-card {
-    /* Box constraints: Narrower width */
     width: 100%;
     max-width: 420px; 
     padding: 40px 30px;
     background: #1b1b1b;
     border-radius: 16px;
-    
-    /* Layout: Vertical Stack (Image Top, Text Bottom) */
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Centers all text inside */
+    text-align: center; 
     
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
@@ -44,7 +40,7 @@ a {
 .profile-img {
     width: 160px;
     height: 160px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%; 
     object-fit: cover;
     background: #333;
     margin-bottom: 20px;
@@ -61,22 +57,16 @@ a {
     font-size: 16px;
     line-height: 1.6;
     color: #ccc;
-    max-width: 300px; /* Keeps text from getting too wide to read */
-    margin: 0 auto;   /* Centers the text block itself */
+    max-width: 300px; 
+    margin: 0 auto;   
 }
 
-/* --- Social Icons (Separate Box) --- */
 .social-box-wrapper {
-    /* Placed separate from profile card */
-    margin-top: 20px; 
-    
-    /* Visuals: Dark background, "Fit Content" width */
+    margin-top: 20px;     
     background: #1b1b1b;
     padding: 15px 30px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px; 
     width: fit-content;
-    
-    /* Flex center */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,11 +88,13 @@ a {
     transform: scale(1.1);
 }
 
-/* --- Projects Section --- */
 .projects-container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
+    background: #1b1b1b;  
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .section-title {
@@ -117,7 +109,7 @@ a {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 24px;
 }
 
@@ -149,7 +141,6 @@ a {
     z-index: 1;
 }
 
-/* Hover GIF logic */
 .project .hover-img {
     z-index: 2;
     opacity: 0;
@@ -159,7 +150,6 @@ a {
     opacity: 1;
 }
 
-/* --- Modal / Popup --- */
 .modal {
     position: fixed;
     inset: 0;
@@ -182,13 +172,10 @@ a {
     position: relative;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     color: #ddd;
-    
-    /* Custom Scrollbar */
     scrollbar-width: thin;
     scrollbar-color: #444 #222;
 }
 
-/* Webkit scrollbar styling */
 .modal-content::-webkit-scrollbar {
     width: 8px;
 }
@@ -227,7 +214,6 @@ a {
     overflow: hidden;
 }
 
-/* Modal content styling */
 .modal-body img {
     width: 100%;
     border-radius: 8px;
