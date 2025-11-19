@@ -23,7 +23,7 @@ const projects = [
 
 const grid = document.getElementById("projectGrid");
 const modal = document.getElementById("modal");
-const modalContent = document.getElementById("modalContent");
+const modalContent = document.getElementById("modalBody");
 const closeBtn = document.getElementById("closeBtn");
 
 // Build project boxes
