@@ -1,8 +1,8 @@
 const projects = [
     {
         title: "Project 1 - 3D Platformer",
-        thumb: "assets/Project1/3D_Platformer_Thumbnail.png",     // thumbnail image here 
-        hover: "assets/Project1/3D_Platformer_hover.gif",     // GIF here 
+        thumb: "assets/3D_Platformer_Thumbnail.png",     // thumbnail image here 
+        hover: "assets/3D_Platformer_hover.gif",     // GIF here 
         content: `
             <!--  Replace with actual GIF or image -->
             <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
