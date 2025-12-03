@@ -1,46 +1,88 @@
 const projects = [
+
     {
-        title: "Project 1 - 3D Platformer",
+        title: "Networked Arcade Tennis",
+        thumb: "assets/placeholder_project.png",     
+        hover: "assets/placeholder_project.gif",     
+        content: `
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            
+            //short gif of gameplay
+            
+            <p>Overview: A competitive 2-player online arcade game built on a Client-Host architecture. Developed using Unity,FishNet Networking, and custom application of edgegap relay.</p>
+                            
+            //diagram showing how information is sent and recieved
+            
+            <p>- To resolve Client-Host connectivity challenges such as NAT traversal and firewalls,
+             I created a custom connection manager. This system uses an asynchronous state machine
+              to negotiate with the Edgegap API, allocating a relay server and handling the
+               handshake process automatically to ensure reliable player connections</p>
+                
+            //diagram showing the information sent over packets as well as psuedocode of ball
+
+            <p>- To optimize network bandwidth, I replaced standard transform synchronization
+             with a deterministic parametric model. Instead of replicating the ball's position
+              every tick, the server transmits trajectory parameters (velocity, origin, timestamp)
+               only upon impact. Clients use this data to locally simulate the exact same parabolic arc,
+                ensuring zero desynchronization with minimal data transfer.</p>
+
+                //
+
+            `
+    },
+
+    {
+        title: "Modular Minigame Framework",
+        thumb: "assets/placeholder_project.png",     
+        hover: "assets/placeholder_project.gif",     
+        content: `
+            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            //short gif of gameplay
+            
+            <p>Overview: A scalable, data-driven architecture for managing asynchronous asset streaming and decoupled game logic in Unity.</p>
+
+            //show interface alongside snippet of game manager
+
+            <p>TI used the Strategy Pattern to decouple the core game loop from the individual minigames. 
+            By defining a strict IMinigame interface, the GameManager can initialize and run any game logic
+             without needing to know its specific implementation details. This makes the codebase modular and
+              easy to expand.</p>
+
+              //short gif of me adding a new game to the game manager
+
+            <p>To improve the development workflow, I separated game data from logic using ScriptableObjects.
+             New minigames are added by creating a configuration asset and registering it with the Manager.
+              This allows for quick balancing and iteration without needing to modify the code itself.</p>
+
+              //short gif of the stress test
+            
+            <p>I implemented an asynchronous resource pipeline using Unity Addressables to handle
+             asset streaming. Instead of loading everything at start, the system loads minigame
+              assets into a queue on-demand and releases them immediately upon completion.
+              The video shows a technical stress test using uncompressed high-res textures applied to 3d objects.
+               It demonstrates the system successfully performing a complete memory release
+                cycle between rounds, returning to a near-zero memory footprint even after handling
+                 heavy data loads</p>
+        
+
+            `
+    },
+
+    {
+        title: "Modular Character Controller",
         thumb: "assets/3D_Platformer_Thumbnail.png",     // thumbnail image here 
         hover: "assets/3D_Platformer_hover.gif",     // GIF here 
         content: `
             <!--  Replace with actual GIF or image -->
             <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
-            <p>A 3D platformer with a </p>
+
+            //update last
+            <p>A 3D character controller architected to replicate the complex,
+             momentum-based movement mechanics of games like super mario 64 and super mario odyssey
+             </p>
+
+
         `
-    },
-
-    {
-        title: "Project 2 - Networked Arcade Tennis",
-        thumb: "assets/placeholder_project.png",     
-        hover: "assets/placeholder_project.gif",     
-        content: `
-            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
-            <p>Overview: A 2 player online game built on a Client-Host architecture, using Unity, Fishnet Networking, and Edgegap Relay API</p>
-                //diagram showing how information is sent and recieved
-            <p>- To take advantage of the host-client architecture but avoid all the issues that come with it, firewalls and router NATs, I implemented an asynchronous state machine that negotiates with an external API (edgegap) to find a relay server</p>
-                //diagram showing the information sent over packets as well as psuedocode of ball
-            <p>- To avoid the heavy weight of things like constantly updating the ball's position every tick, the game synchronizes the parameters of the arc upon being hit. The client using this information can then simulate the trajectory locally.</p>
-
-            `
-    },
-
-    {
-        title: "Project 3 - Modular Minigame Framework",
-        thumb: "assets/placeholder_project.png",     
-        hover: "assets/placeholder_project.gif",     
-        content: `
-            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
-            <p>A modular micro-game engine that features Asynchronous Asset Streaming, interface-based polymorphism, and a data-driven configuration pipeline</p>
-
-            <p>To prevent tight coupling between core game loop and individual minigames, i utilized the Strategy Patter. I defined a interface (IMinigame) that enforces intilization and execution logic. This way the GameManager can operate purely on abstraction.</p>
-
-            <p>Following this pattern I also designed the framework to be designer-first. By abstracting the game perameters into ScriptableObjects, I created a plug and play workflow. New minigames can quickly be integrated into the live build by simply creating a configuration asset and registering it with the main game manager. This allows for raapid iteration and balancing.</p>
-            
-            <p>Built with scalability in mind I created a custom resource pipeline using Unity Addressables. Standard instantiation can bloat runtime memory, my system utilizes an asyncronous state machine to stream assets on-demand. The video demonstrates a stress test using 3D objects with heavy textures, it is built using the same bones as the minigame framework and was used to demonstrate the memory changes.</p>
-        
-
-            `
     },
  
     
