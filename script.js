@@ -2,7 +2,7 @@ const projects = [
 
     {
         title: "Networked Arcade Tennis",
-        thumb: "assets/placeholder_project.png",     
+        thumb: "assets/Arcade_Tennis_Thumbnail.png",     
         hover: "assets/Arcade_Tennis_Gameplay.gif",     
         content: `
             <img src="assets/Arcade_Tennis_Gameplay.gif" style="width:100%; border-radius:8px;">
@@ -29,7 +29,7 @@ const projects = [
 
     {
         title: "Modular Minigame Framework",
-        thumb: "assets/placeholder_project.png",     
+        thumb: "assets/Minigame_Framework_Thumbnail.png",     
         hover: "assets/Minigame_Framework_Gameplay.gif",     
         content: `
             <img src="assets/Minigame_Framework_Gameplay.gif" style="width:100%; border-radius:8px;">
@@ -49,7 +49,7 @@ const projects = [
              New minigames are added by creating a configuration asset and registering it with the Manager.
               This allows for quick balancing and iteration without needing to modify the code itself.</p>
 
-              //short gif of the stress test
+             <img src="assets/Minigame_Framework_Stress_Test.gif" style="width:100%; border-radius:8px;">
             
             <p>I implemented an asynchronous resource pipeline using Unity Addressables to handle
              asset streaming. Instead of loading everything at start, the system loads minigame
