@@ -3,13 +3,11 @@ const projects = [
     {
         title: "Networked Arcade Tennis",
         thumb: "assets/placeholder_project.png",     
-        hover: "assets/placeholder_project.gif",     
+        hover: "assets/Arcade_Tennis_Gameplay.gif",     
         content: `
-            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <img src="assets/Arcade_Tennis_Gameplay.gif" style="width:100%; border-radius:8px;">
             
-            //short gif of gameplay
-            
-            <p>Overview: A competitive 2-player online arcade game built on a Client-Host architecture. Developed using Unity,FishNet Networking, and custom application of edgegap relay.</p>
+            <p>Overview: A 2-player online arcade game built on a Client-Host architecture. Developed using Unity,FishNet Networking, and custom application of edgegap relay.</p>
                             
             //diagram showing how information is sent and recieved
             
@@ -18,7 +16,7 @@ const projects = [
               to negotiate with the Edgegap API, allocating a relay server and handling the
                handshake process automatically to ensure reliable player connections</p>
                 
-            //diagram showing the information sent over packets as well as psuedocode of ball
+            <img src="assets/Arcade_Tennis_Ball_Physics.gif" style="width:100%; border-radius:8px;">
 
             <p>- To optimize network bandwidth, I replaced standard transform synchronization
              with a deterministic parametric model. Instead of replicating the ball's position
@@ -26,24 +24,21 @@ const projects = [
                only upon impact. Clients use this data to locally simulate the exact same parabolic arc,
                 ensuring zero desynchronization with minimal data transfer.</p>
 
-                //
-
             `
     },
 
     {
         title: "Modular Minigame Framework",
         thumb: "assets/placeholder_project.png",     
-        hover: "assets/placeholder_project.gif",     
+        hover: "assets/Minigame_Framework_Gameplay.gif",     
         content: `
-            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
-            //short gif of gameplay
+            <img src="assets/Minigame_Framework_Gameplay.gif" style="width:100%; border-radius:8px;">
             
             <p>Overview: A scalable, data-driven architecture for managing asynchronous asset streaming and decoupled game logic in Unity.</p>
 
             //show interface alongside snippet of game manager
 
-            <p>TI used the Strategy Pattern to decouple the core game loop from the individual minigames. 
+            <p>I used the Strategy Pattern to decouple the core game loop from the individual minigames. 
             By defining a strict IMinigame interface, the GameManager can initialize and run any game logic
              without needing to know its specific implementation details. This makes the codebase modular and
               easy to expand.</p>
