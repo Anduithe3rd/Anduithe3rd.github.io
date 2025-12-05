@@ -7,7 +7,8 @@ const projects = [
         content: `
             <img src="assets/Arcade_Tennis_Gameplay.gif" style="width:100%; border-radius:8px;">
             
-            <p>Overview: A 2-player online arcade game built on a Client-Host architecture. Developed using Unity,FishNet Networking, and custom application of edgegap relay.</p>
+            <p>Overview: A 2-player online arcade game built on a Client-Host architecture.
+             Developed using Unity, FishNet Networking, and a custom application of edgegap relay.</p>
                             
             //diagram showing how information is sent and recieved
             
@@ -34,30 +35,32 @@ const projects = [
         content: `
             <img src="assets/Minigame_Framework_Gameplay.gif" style="width:100%; border-radius:8px;">
             
-            <p>Overview: A scalable, data-driven architecture for managing asynchronous asset streaming and decoupled game logic in Unity.</p>
+            <p>Overview: A "WarioWare"-style infinite minigame game that could scale indefinitely
+             without performance costs or messy code dependencies</p>
 
-            //show interface alongside snippet of game manager
+              <img src="assets/Minigame_Framework_Split.png" style="width:100%; border-radius:8px;">
 
-            <p>I used the Strategy Pattern to decouple the core game loop from the individual minigames. 
-            By defining a strict IMinigame interface, the GameManager can initialize and run any game logic
-             without needing to know its specific implementation details. This makes the codebase modular and
-              easy to expand.</p>
+            <p>For modularity purposes I didn't want the Game Manager to know the specific rules of every single minigame.
+              Instead, I defined a strict IMinigame interface.
+              The Manager simply initializes and starts a game, indifferent to the specific mechanics inside</p>
 
-              //short gif of me adding a new game to the game manager
+              <img src="assets/Minigame_Framework_Modular.gif" style="width:100%; border-radius:8px;">
 
-            <p>To improve the development workflow, I separated game data from logic using ScriptableObjects.
-             New minigames are added by creating a configuration asset and registering it with the Manager.
-              This allows for quick balancing and iteration without needing to modify the code itself.</p>
+            <p>To separate data from logic, I utilized ScriptableObjects. Adding a new minigame
+             is as simple as creating a config asset (defining time limits, win conditions, and
+              asset references) and dropping it into the game manager's list.</p>
 
              <img src="assets/Minigame_Framework_Stress_Test.gif" style="width:100%; border-radius:8px;">
             
-            <p>I implemented an asynchronous resource pipeline using Unity Addressables to handle
-             asset streaming. Instead of loading everything at start, the system loads minigame
-              assets into a queue on-demand and releases them immediately upon completion.
-              The video shows a technical stress test using uncompressed high-res textures applied to 3d objects.
-               It demonstrates the system successfully performing a complete memory release
-                cycle between rounds, returning to a near-zero memory footprint even after handling
-                 heavy data loads</p>
+            <p>Since the goal was an "infinite" loop, I couldn't load every asset at startup. I implemented
+             a queue system using Unity Addressables. The system asynchronously streams the assets
+              for the next few games in the queue while the player is busy playing the current one.
+               Once a round is finished, those assets are immediately released.
+               
+               For visual representation I repurposed the game manager in a 3d project using hi res uncompressed
+               textures on cubes. The graph represents the in game memory as the "mini games" are loaded and 
+               unloaded via the queue system.
+               </p>
         
 
             `
