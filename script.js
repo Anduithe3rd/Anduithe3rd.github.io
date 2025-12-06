@@ -45,10 +45,10 @@ const projects = [
 
               <img src="assets/Minigame_Framework_Modular.gif" style="width:100%; border-radius:8px;">
 
-            <p>To separate data from logic, I utilized ScriptableObjects. Adding a new minigame 
+            <p>To separate data from logic, I utilized ScriptableObjects.
                 To add a new minigame you simply have to create a config asset
                 (defining time limits, win conditions, and
-              asset references) and drop it into the game manager's list.</p>
+              game reference) and drop it into the game manager's list.</p>
 
              <img src="assets/Minigame_Framework_Stress_Test.gif" style="width:100%; border-radius:8px;">
             
@@ -69,15 +69,32 @@ const projects = [
     {
         title: "Modular Character Controller",
         thumb: "assets/3D_Platformer_Thumbnail.png",     // thumbnail image here 
-        hover: "assets/3D_Platformer_hover.gif",     // GIF here 
+        hover: "assets/3D_Platformer_Gameplay.gif",     // GIF here 
         content: `
-            <!--  Replace with actual GIF or image -->
-            <img src="assets/placeholder_project.gif" style="width:100%; border-radius:8px;">
+            <img src="assets/3D_Platformer_Gameplay.gif" style="width:100%; border-radius:8px;">
 
-            //update last
-            <p>A 3D character controller architected to replicate the complex,
-             momentum-based movement mechanics of games like super mario 64 and super mario odyssey
+            <p>Overview: A 3D platformer framework designed to replicate the complex, momentum-based
+             movement mechanics found in some of my personal favorite 3D platformers like Super Mario Odyssey and Super Mario 64.
+              Built on top of a standard Kinematic Character Controller (KCC) for robust collision
+               handling, I engineered a custom, modular State Machine to handle player logic.
              </p>
+
+             <img src="assets/3D_Platformer_Split.png" style="width:100%; border-radius:8px;">
+
+             <p>To avoid putting everything in one very large and unorganized script, I enforced a 
+             strict abstract MovementState base class. The central controller simply
+              holds a Dictionary of these states, completely decoupled from specific movement logic.
+               This allows new mechanics to be added as isolated scripts without
+                touching the core physics engine.</p>
+
+             <img src="assets/3D_Platformer_Config.gif" style="width:100%; border-radius:8px;">
+
+             <p>To separate data from logic, I utilized ScriptableObjects for all physics 
+             parameters. Factors like jump height, speed, and acceleration are easily editable 
+             in the inspector, allowing for real-time iteration during play mode 
+             without needing to recompile code.</p>
+
+
 
 
         `
