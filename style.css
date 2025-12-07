@@ -164,7 +164,7 @@ a {
 .modal-content {
     background: #1f1f1f;
     width: 90%;
-    max-width: 500px;
+    max-width: 900px; 
     height: 80vh;
     overflow-y: auto;
     padding: 30px;
@@ -229,4 +229,5 @@ a {
 .modal-body p {
     line-height: 1.6;
     margin-bottom: 15px;
+    max-width: 700px; 
 }
