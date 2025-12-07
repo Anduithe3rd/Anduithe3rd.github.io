@@ -9,6 +9,7 @@ const projects = [
             
             <p>Overview: A 2-player online arcade game built on a Client-Host architecture.
              Developed using Unity, FishNet Networking, and a custom application of edgegap relay.</p>
+             <p></p>
                             
             <img src="assets/Arcade_Tennis_Connection.png" style="width:100%; border-radius:8px;">
             
@@ -16,6 +17,7 @@ const projects = [
              I created a custom connection manager. This system uses an asynchronous state machine
               to speak with the Edgegap API, allocating a relay server and handling the
                handshake process automatically to ensure reliable player connections</p>
+               <p></p>
                 
             <img src="assets/Arcade_Tennis_Ball_Physics.gif" style="width:100%; border-radius:8px;">
 
@@ -34,14 +36,16 @@ const projects = [
         content: `
             <img src="assets/Minigame_Framework_Gameplay.gif" style="width:100%; border-radius:8px;">
             
-            <p>Overview: A "WarioWare"-style infinite minigame game built to scale indefinitely
+            <p>Overview: A infinite minigame game, inspired by Warioware, built to scale indefinitely
              without performance costs or messy code dependencies</p>
+             <p></p>
 
               <img src="assets/Minigame_Framework_Split.png" style="width:100%; border-radius:8px;">
 
-            <p>For modularity purposes I didn't want the Game Manager to know the specific rules of every single minigame.
+            <p>For modularity purposes I didn't want the Game Manager to need know the specific rules of every single minigame.
               Instead, I defined a IMinigame interface.
               The Manager simply initializes and starts a game, indifferent to the specific mechanics inside</p>
+              <p></p>
 
               <img src="assets/Minigame_Framework_Modular.gif" style="width:100%; border-radius:8px;">
 
@@ -49,6 +53,7 @@ const projects = [
                 To add a new minigame you simply have to create a config asset
                 (defining time limits, win conditions, and
               game reference) and drop it into the game manager's list.</p>
+              <p></p>
 
              <img src="assets/Minigame_Framework_Stress_Test.gif" style="width:100%; border-radius:8px;">
             
@@ -78,6 +83,7 @@ const projects = [
               Built on top of a standard Kinematic Character Controller (KCC) for robust collision
                handling, I engineered a custom, modular State Machine to handle player logic.
              </p>
+             <p></p>
 
              <img src="assets/3D_Platformer_Split.png" style="width:100%; border-radius:8px;">
 
@@ -86,6 +92,7 @@ const projects = [
               holds a Dictionary of these states, completely decoupled from specific movement logic.
                This allows new mechanics to be added as isolated scripts without
                 touching the core physics engine.</p>
+                <p></p>
 
              <img src="assets/3D_Platformer_Config.gif" style="width:100%; border-radius:8px;">
 
